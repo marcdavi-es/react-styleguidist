@@ -61,7 +61,7 @@ It will try to use the `displayName` of your component as the identifier. If it 
   <tr>
     <td>/component.js</td>
     <td>
-      <pre>export default function Component() { ... }</pre>
+      <pre style="margin:0;">export default function Component() { ... }</pre>
     </td>
     <td>Component</td>
     <td>-</td>
@@ -70,19 +70,20 @@ It will try to use the `displayName` of your component as the identifier. If it 
   <tr>
     <td>/component.js</td>
     <td>
-      <pre>export default function Component() { ... }<br>Component.displayName = 'SomeName';</pre>
-    </td>
-    <td>SomeName</td>
-    <td>-</td>
-    <td>SomeName</td>
-  </tr>
-  <tr>
-    <td>/component.js</td>
-    <td>
-      <pre>
+      <pre style="margin:0;">
 export default function Component() { ... }
-Component.displayName = dynamicNamer();
-      </pre>
+Component.displayName = 'SomeName';</pre>
+    </td>
+    <td>SomeName</td>
+    <td>-</td>
+    <td>SomeName</td>
+  </tr>
+  <tr>
+    <td>/component.js</td>
+    <td>
+      <pre style="margin:0;">
+export default function Component() { ... }
+Component.displayName = dynamicNamer();</pre>
     </td>
     <td>Component
     </td>
@@ -92,13 +93,12 @@ Component.displayName = dynamicNamer();
   <tr>
     <td>/component.js</td>
     <td>
-      <pre>
+      <pre style="margin:0;">
 const name = 'Component';
 const componentMap = {
   [name]: function() { ... }
 };
-        export default componentMap[name];
-      </pre>
+export default componentMap[name];</pre>
     </td>
     <td>Cannot understand</td>
     <td>File name</td>
@@ -107,13 +107,12 @@ const componentMap = {
   <tr>
     <td>/component/index.js</td>
     <td>
-      <pre>
+      <pre style="margin:0;">
 const name = 'Component';
 const componentMap = {
   [name]: function() { ... }
 };
-export default componentMap[name];
-      </pre>
+export default componentMap[name];</pre>
     </td>
     <td>Cannot understand</td>
     <td>Folder name</td>
