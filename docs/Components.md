@@ -61,9 +61,7 @@ It will try to use the `displayName` of your component as the identifier. If it 
   <tr>
     <td>/path/to/component.js</td>
     <td>
-      <pre>
-        export default function Component() { ... }
-      <pre/>
+      <pre>export default function Component() { ... }<pre/>
     </td>
     <td>Component</td>
     <td>-</td>
@@ -72,10 +70,7 @@ It will try to use the `displayName` of your component as the identifier. If it 
   <tr>
     <td>/path/to/component.js</td>
     <td>
-      <pre>
-        export default function Component() { ... }
-        Component.displayName = 'SomeName';
-      <pre/>
+      <pre>export default function Component() { ... }<br>Component.displayName = 'SomeName';<pre/>
     </td>
     <td>SomeName</td>
     <td>-</td>
