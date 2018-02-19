@@ -59,7 +59,7 @@ It will try to use the `displayName` of your component as the identifier. If it 
     <th>Global identifier</th>
   </tr>
   <tr>
-    <td>/path/to/component.js</td>
+    <td>/component.js</td>
     <td>
       <pre>export default function Component() { ... }</pre>
     </td>
@@ -68,7 +68,7 @@ It will try to use the `displayName` of your component as the identifier. If it 
     <td>Component</td>
   </tr>
   <tr>
-    <td>/path/to/component.js</td>
+    <td>/component.js</td>
     <td>
       <pre>export default function Component() { ... }<br>Component.displayName = 'SomeName';</pre>
     </td>
@@ -77,7 +77,7 @@ It will try to use the `displayName` of your component as the identifier. If it 
     <td>SomeName</td>
   </tr>
   <tr>
-    <td>/path/to/component.js</td>
+    <td>/component.js</td>
     <td>
       <pre>
         export default function Component() { ... }
@@ -90,7 +90,7 @@ It will try to use the `displayName` of your component as the identifier. If it 
     <td>Component</td>
   </tr>
   <tr>
-    <td>/path/to/component.js</td>
+    <td>/component.js</td>
     <td>
       <pre>
         const name = 'Component';
@@ -105,7 +105,7 @@ It will try to use the `displayName` of your component as the identifier. If it 
     <td>Component</td>
   </tr>
   <tr>
-    <td>/path/to/component/index.js</td>
+    <td>/component/index.js</td>
     <td>
       <pre>
         const name = 'Component';
@@ -127,11 +127,11 @@ It will try to use the `displayName` of your component as the identifier. If it 
 Stylegudist will use an ECMAScript module’s `default` export or CommonJS `module.exports` if they are defined.
 
 ```javascript
-// /path/to/component.js
+// /component.js
 export default function Component() { ... }
 // will be exposed globally as Component
 
-// /path/to/component.js
+// /component.js
 function Component() { ... }
 module.exports = Component;
 // will be exposed globally as Component
@@ -142,7 +142,7 @@ If you use only named exports, Styleguidist will expose named exports from modul
 If there is only one named export, it will expose that.
 
 ```javascript
-// /path/to/component.js
+// /component.js
 export function Component() { ... }
 // will be exposed globally as Component
 ```
@@ -150,7 +150,7 @@ export function Component() { ... }
 If there are several named exports, it will expose the named export which has the same name as the understood identifier.
 
 ```javascript
-// /path/to/component.js
+// /component.js
 export function someUtil() { ... }
 // will not be exposed
 
