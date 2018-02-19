@@ -80,8 +80,8 @@ It will try to use the `displayName` of your component as the identifier. If it 
     <td>/component.js</td>
     <td>
       <pre>
-        export default function Component() { ... }
-        Component.displayName = dynamicNamer();
+export default function Component() { ... }
+Component.displayName = dynamicNamer();
       </pre>
     </td>
     <td>Component
@@ -93,10 +93,10 @@ It will try to use the `displayName` of your component as the identifier. If it 
     <td>/component.js</td>
     <td>
       <pre>
-        const name = 'Component';
-        const componentMap = {
-          [name]: function() { ... }
-        };
+const name = 'Component';
+const componentMap = {
+  [name]: function() { ... }
+};
         export default componentMap[name];
       </pre>
     </td>
@@ -108,11 +108,11 @@ It will try to use the `displayName` of your component as the identifier. If it 
     <td>/component/index.js</td>
     <td>
       <pre>
-        const name = 'Component';
-        const componentMap = {
-          [name]: function() { ... }
-        };
-        export default componentMap[name];
+const name = 'Component';
+const componentMap = {
+  [name]: function() { ... }
+};
+export default componentMap[name];
       </pre>
     </td>
     <td>Cannot understand</td>
